@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Problem2 {
@@ -8,15 +9,16 @@ public class Problem2 {
         int a = input.nextInt();
         int b = input.nextInt();
         int c = input.nextInt();
-
-        /*
-          Rational class를 참고하여 코드 작성
-        */
+        
+        Rational h = new Rational(-b,2*a);
+        Rational k = new Rational((long) (4*a*c-Math.pow(b, 2)),4*a);
+        
+        System.out.println("h is "+h+" k is "+k);
       
     }
   
     static class Rational extends Number implements Comparable<Rational> {
-        // Data fields for numerator and denominator
+        // Data fields for numerator=분자 and denominator=분모
         private long[] r = new long[2];
 
         /**Default constructor*/
